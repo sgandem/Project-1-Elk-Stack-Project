@@ -1,6 +1,5 @@
-Metricbeat Configuration file
+#Metricbeat Configuration file
 
-root@088f2bc32294:/etc/ansible# cat metricbeat-config.yml
 ###################### Metricbeat Configuration Example #######################
 
 # This file is an example configuration file highlighting only the most common
