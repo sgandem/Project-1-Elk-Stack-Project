@@ -16,6 +16,8 @@ These files have been tested and used to generate a live ELK deployment on Azure
 - [filebeat-playbook.yml](https://github.com/sgandem/Project-1-Elk-Stack-Project/blob/2b7f481bc64b8db2301b4b86e3491a7b0435f65d/Ansible/filebeat-playbook.yml)
 - [filebeat-config.yml](https://github.com/sgandem/Project-1-Elk-Stack-Project/blob/2b7f481bc64b8db2301b4b86e3491a7b0435f65d/Ansible/filebeat-config.yml)
 
+<p>&nbsp;</p>
+
 This document contains the following details:
 
 - Description of the Topology
@@ -24,6 +26,8 @@ This document contains the following details:
   - Beats in Use
   - Machines Being Monitored
 - How to Use the Ansible Build
+
+<p>&nbsp;</p>
 
 ### **Description of the Topology**
 
@@ -59,6 +63,8 @@ The configuration details of each machine may be found below. _Note: Use the_[_M
 | DVWA-VM3 | webserver | 10.0.0.12 | Linux |
 | ELK Server | Elkserver | 10.2.0.440.70.25.58 | Linux |
 
+<p>&nbsp;</p>
+
 ### **Access Policies**
 
 The machines on the internal network are not exposed to the public Internet.
@@ -71,6 +77,8 @@ Machines within the network can only be accessed by \_\_\_\_
 
 - The ELK-VM is accessible by SSH from the JumpBox which is accessed via web from Personal IP Address
 
+<p>&nbsp;</p>
+
 A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Address** |
@@ -80,6 +88,8 @@ A summary of the access policies in place can be found in the table below.
 | DVWA-VM2 | No | 10.0.0.11 |
 | DVWA-VM3 | No | 10.0.0.12 |
 | ELK Server | No | 10.2.0.4 |
+
+<p>&nbsp;</p>
 
 ### **Elk Configuration**
 
@@ -101,7 +111,7 @@ The following screenshot displays the result of running docker ps after successf
 
 ![Screenshot of ELK Docker running](https://github.com/sgandem/Project-1-Elk-Stack-Project/blob/9b941fc04a718d9e61ae0409df373ec556338921/Images/Elk%20Docker%20Running.png)
 
-
+<p>&nbsp;</p>
 
 ### **Target Machines &amp; Beats**
 
@@ -121,6 +131,8 @@ These Beats allow us to collect the following information from each machine:
 - Filebeat monitor log files and collect log events
 - Metricbeats provides the machine metrics
 
+<p>&nbsp;</p>
+
 ### **Using the Playbook**
 
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned:
@@ -139,12 +151,13 @@ For Metricbeat:-
 - Update to include the the correct ELK private IP in the metricbeat-config.yml file
 - Run the playbook, and navigate to ELK-VM public IP to check the installation
 
+<p>&nbsp;</p>
+
 As a **Bonus** provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
 Filebeat Installation file with commands
 
 ---
-
 - name: installing and launching filebeat
 
 hosts: webservers
