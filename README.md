@@ -57,11 +57,11 @@ The configuration details of each machine may be found below. _Note: Use the_[_M
 
 | **Name** | **Function** | **IP Address** | **Operating System** |
 | --- | --- | --- | --- |
-| Jump Box | Gateway | 10.0.0.9  40.121,58.10 | Linux |
+| Jump Box | Gateway | 10.0.0.9/40.121,58.10 | Linux |
 | DVWA-VM1 | webserver | 10.0.0.10 | Linux |
 | DVWA-VM2 | webserver | 10.0.0.11 | Linux |
 | DVWA-VM3 | webserver | 10.0.0.12 | Linux |
-| ELK Server | Elkserver | 10.2.0.4  40.70.25.58 | Linux |
+| ELK Server | Elkserver | 10.2.0.4/40.70.25.58 | Linux |
 
 <p>&nbsp;</p>
 
