@@ -132,7 +132,7 @@ For Metricbeat:-
 - Update to include the the correct ELK private IP in the metricbeat-config.yml file
 - Run the playbook, and navigate to ELK-VM public IP to check the installation
 
-_As a_ _ **Bonus** __, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+As a **Bonus** provide the specific commands the user will need to run to download the playbook, update the files, etc.
 
 Filebeat Installation file with commands
 
