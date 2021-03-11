@@ -1,5 +1,7 @@
 ## **Automated ELK Stack Deployment**
 
+<p>&nbsp;</p>
+
 
 The files in this repository were used to configure the network depicted below.
 
