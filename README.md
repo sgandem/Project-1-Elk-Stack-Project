@@ -83,11 +83,11 @@ A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Address** |
 | --- | --- | --- |
-| Jump Box | Yes/No | 40.121,58.10 - Public IP Address10.0.0.9 - Private IP Address |
+| Jump Box | Yes/No | 40.121,58.10-Public IP / 10.0.0.9-Private IP |
 | DVWA-VM1 | No | 10.0.0.10 |
 | DVWA-VM2 | No | 10.0.0.11 |
 | DVWA-VM3 | No | 10.0.0.12 |
-| ELK Server | No | 10.2.0.4 |
+| ELK Server | Yes/No | 40.70.25.58-Public IP / 10.2.0.4-Private IP |
 
 <p>&nbsp;</p>
 
@@ -102,9 +102,9 @@ The playbook implements the following tasks:
 In 3-5 bullets, explain the steps of the ELK installation
 
 - SSH into the Jump-Box-Provisioner
-- Start and attach the ansible docker
+- Start and attach the Ansible docker
 - Created the playbook.yml in the /etc/ansible/roles directory
-- Ran the Playbook.yml in that same directory
+- Ran the playbook.yml in that same directory
 - Verified that the server is up by SSH into the ELK-VM
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
@@ -159,100 +159,65 @@ Filebeat Installation file with commands
 
 ---
 - name: installing and launching filebeat
-
 hosts: webservers
-
 become: yes
-
 tasks:
 
 - name: download filebeat deb
-
 command: curl -L -O https://artifacts.elastic.co/downloads/beats/filebeat/filebeat-7.6.2-amd64.deb
 
 - name: install filebeat deb
-
 command: dpkg -i filebeat-7.6.2-amd64.deb
 
 - name: drop in filebeat.yml
-
 copy:
-
 src: /etc/ansible/filebeat-config.yml
-
 dest: /etc/filebeat/filebeat.yml
 
 - name: enable and configure system module
-
 command: filebeat modules enable system
 
 - name: setup filebeat
-
 command: filebeat setup
 
 - name: start filebeat service
-
 command: service filebeat start
 
 - name: enable service filebeat on boot
-
 systemd:
 
 name: filebeat
-
 enabled: yes
 
+---
 Metricbeat Installation file with commands
 
----
-
 - name: Install metric beat
-
 hosts: webservers
-
 become: true
-
 tasks:
 
-
 - name: Download metricbeat
-
 command: curl -L -O https://artifacts.elastic.co/downloads/beats/metricbeat/metricbeat-7.6.2-amd64.deb
 
-
 - name: install metricbeat
-
 command: sudo dpkg -i metricbeat-7.6.2-amd64.deb
 
-
 - name: drop in metricbeat config
-
 copy:
-
 src: /etc/ansible/metricbeat-config.yml
-
 dest: /etc/metricbeat/metricbeat.yml
 
-
 - name: enable and configure docker module for metric beat
-
 command: metricbeat modules enable docker
 
-
 - name: setup metric beat
-
 command: metricbeat setup
 
-
 - name: start metric beat
-
 command: service metricbeat start
 
-
 - name: enable service metricbeat on boot
-
 systemd:
-
 name: metricbeat
-
 enabled: yes
