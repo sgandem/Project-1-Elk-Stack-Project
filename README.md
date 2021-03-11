@@ -201,10 +201,10 @@ Filebeat Installation file with commands
       name: filebeat
 
       enabled: yes
+      
+---      
 
 Metricbeat Installation file with commands
-
----
 
 - name: Install metric beat
 
