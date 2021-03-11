@@ -1,7 +1,5 @@
-Filebeat Configuration file
+#Filebeat Configuration file
 
-root@088f2bc32294:/etc/ansible# cat filebeat-config.yml
-######################## Filebeat Configuration ############################
 # This file is a full configuration example documenting all non-deprecated
 # options in comments. For a shorter configuration example, that contains only
 # the most common options, please see filebeat.yml in the same directory.
