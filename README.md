@@ -2,7 +2,6 @@
 
 The files in this repository were used to configure the network depicted below.
 
-**Note** : The following image link needs to be updated. Replace diagram\_filename.png with the name of your diagram image file.
 
 ![](RackMultipart20210311-4-1qaz5zi_html_85a271b8e575fdd1.png)
 
