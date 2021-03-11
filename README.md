@@ -92,9 +92,9 @@ In 3-5 bullets, explain the steps of the ELK installation
 
 The following screenshot displays the result of running docker ps after successfully configuring the ELK instance.
 
-**Note** : The following image link needs to be updated. Replace docker\_ps\_output.png with the name of your screenshot image file.
+![Screenshot of ELK Docker running](https://github.com/sgandem/Project-1-Elk-Stack-Project/blob/9b941fc04a718d9e61ae0409df373ec556338921/Images/Elk%20Docker%20Running.png)
 
-![](RackMultipart20210311-4-1qaz5zi_html_f6799dfa9c2e9cbe.png)
+
 
 ### **Target Machines &amp; Beats**
 
