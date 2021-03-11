@@ -67,19 +67,12 @@ Machines within the network can only be accessed by \_\_\_\_
 A summary of the access policies in place can be found in the table below.
 
 | **Name** | **Publicly Accessible** | **Allowed IP Address** |
- |
-| --- | --- | --- | --- |
+| --- | --- | --- |
 | Jump Box | Yes/No | 40.121,58.10 - Public IP Address10.0.0.9 - Private IP Address |
- |
 | DVWA-VM1 | No | 10.0.0.10 |
- |
 | DVWA-VM2 | No | 10.0.0.11 |
- |
 | DVWA-VM3 | No | 10.0.0.12 |
- |
-| ELK Server | No | 10.2.0.4
- |
- |
+| ELK Server | No | 10.2.0.4 |
 
 ### **Elk Configuration**
 
